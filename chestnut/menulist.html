@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+		<meta charset="UTF-8"/>
+    <link rel="stylesheet" type="text/css" href="resource/css/common.css"/>
+    <link rel="stylesheet" type="text/css" href="resource/css/shopcar.css"/>
+    <link rel="stylesheet" type="text/css" href="resource/font-awesome-4.7.0/css/font-awesome.css"/>
+	</head>
+	<body>
+		<div class="nut-header"><a href="./index.html"><i class="fa fa-home"></i></a>菜单组件实战</div>
+		<div class="nut-content" :style="contentstyle" v-cloak>
+			<div class='nut-item'>
+        <div id="app">
+          <tsmenu :menudata="menudata">
+            
+          </tsmenu>
+        </div>
+			</div>
+		</div>
+    <script src="resource/js/jquery-3.2.1/jquery-3.2.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="resource/js/vue.js" type="text/javascript" charset="utf-8"></script>
+	<script>
+		 Vue.component('tsmenu',{
+       props:{'menudata':{
+         type:Array,
+         default:function(){
+           return [];
+         }
+       }},
+       template:'\
+        <ul><li v-for="item in menudata"><a :href="item.href" :id=item.id>{{item.name}}</a><tsmenu v-if="item.children!=undefined" :menudata=item.children></tsmenu></li></ul>',
+     });
+     var app = new Vue({
+       el:"#app",
+       data:{
+         menudata:[{name:'购物车实战',href:'./shopcar.html',id:'001',
+          children:[
+          {name:'菜单组件实战 ',href:'./menulist.html',id:'0011'},
+          {name:'菜单组件实战 ',href:'./menulist.html',id:'0012'},
+          {name:'菜单组件实战 ',href:'./menulist.html',id:'0013'}
+          ]},
+				{name:'菜单组件实战 ',href:'./menulist.html',id:'002'}]
+       },
+     });
+	</script>
+    <script src="resource/js/common.js" type="text/javascript" charset="utf-8"></script>
+    <script src="resource/js/shopcar.js" type="text/javascript" charset="utf-8"></script>
+	</body>
+</html>

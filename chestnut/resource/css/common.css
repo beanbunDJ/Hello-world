@@ -1,0 +1,43 @@
+[v-cloak]{
+  display: none;
+}
+body{
+  background: #f4edf4;
+  margin: 0;
+  padding: 0;
+}
+table{
+  font-size: 14px;
+}
+ul li{
+  list-style: none;
+}
+.nut-content a{
+  color: #6a6dbb;
+}
+.nut-header{
+  background-color: #a67ea6;
+  height: 60px;
+  text-align: center;
+  line-height: 60px;
+  font-size: 24px;
+  color: #ffffff;
+}
+.nut-header i{
+  margin-right: 24px;
+  color: #ffffff;
+}
+.nut-content{
+  text-align: center;
+  padding: 24px;
+  font-size: 18px;
+  background:url(../img/background.jpg);
+  background-size:cover;
+}
+.nut-item{
+  height: 82%;
+  background: rgba(0,0,0,0.1);
+  width: 40%;
+  margin: auto;
+  padding: 60px 24px;
+}

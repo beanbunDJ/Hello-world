@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+		<meta charset="UTF-8"/>
+		<link rel="stylesheet" type="text/css" href="resource/css/common.css"/>
+	</head>
+	<body>
+		<div class="nut-header">实战练习</div>
+		<div class="nut-content" :style="contentstyle" v-cloak>
+			<div class='nut-item'>
+				<ul v-for='title in titles'>
+					<li><a :href=title.href>课题1：{{title.name}}</a></li>
+				</ul>
+			</div>
+		</div>
+    <script src="resource/js/jquery-3.2.1/jquery-3.2.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="resource/js/vue.js" type="text/javascript" charset="utf-8"></script>
+	<script>
+		  var params = {
+				titles:[{name:'购物车实战',href:'./shopcar.html'},
+				{name:'菜单组件实战 ',href:'./menulist.html'}
+			]};
+			var obj = new Vue({
+				el: '.nut-content',
+				data: params,
+				computed:{
+					contentstyle: function(){return {'height':$(window).height()-$('.nut-header').height()+'px'}} 
+				}
+			});
+	</script>
+		<script src="resource/js/common.js" type="text/javascript" charset="utf-8"></script>
+	</body>
+</html>

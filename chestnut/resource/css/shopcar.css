@@ -1,0 +1,27 @@
+.nut-content{
+  background: #ffe8ff;
+}
+.nut-content th{
+  color: #8b448b;
+  font-size: 16px;
+}
+.nut-btn{
+  background: #dfe2ec;
+  border: 1px solid #5b5bcf;
+  padding: 2px 12px;
+  border-radius: 5px;
+  color:#6132a6;
+}
+.select-all{
+  height: 14px;
+  width: 13px;
+  border-radius: 6px;
+  border: 1px solid #310831;
+}
+.del-all{
+  height: 14px;
+  width: 13px;
+  border-radius: 6px;
+  border: 1px solid #310831;
+  background:#524d77;
+}
